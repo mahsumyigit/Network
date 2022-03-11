@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Enum;
+
 
 namespace network
 {
@@ -44,13 +46,13 @@ namespace network
             modelBuilder.Entity<Category>().HasData(
                 new Category
                 {
-                    CategoryId = 1,
-                    lesson = Category.Lesson.dance
+                    Id = 2,
+                    Lessons=Lesson.yoga
                 },
                 new Category
                   {
-                    CategoryId = 2,
-                    lesson = Category.Lesson.sport
+                    Id = 1,
+                    Lessons=Lesson.dance
                 }
             );
 
@@ -61,7 +63,8 @@ namespace network
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name);
-                entity.Property(e => e.CategoryId);
+                entity.HasOne(e=>e.TeamDetails).WithOne(e=>e.Teams).HasForeignKey("TeamDetailsId");
+                entity.HasOne(e=>e.Category).WithMany(e=>e.Teams).HasForeignKey("CategoryId");
 
             });
             modelBuilder.Entity<TeamDetails>(entity =>
@@ -71,11 +74,14 @@ namespace network
                 entity.Property(e => e.Salary);
                 entity.Property(e => e.StartingDate);
                 entity.Property(c => c.EndingDate);
+                entity.HasOne(e=>e.Teams).WithOne(e=>e.TeamDetails).HasForeignKey("TeamId");
             });
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasKey(e => e.CategoryId);
-                entity.Property(e => e.lesson);
+                entity.HasKey(e => e.Id);
+                entity.Property(e=>e.Lessons);
+                entity.HasMany(e => e.Teams).WithOne(e=>e.Category);
+
             });
             SetDataToDB(modelBuilder);
         }

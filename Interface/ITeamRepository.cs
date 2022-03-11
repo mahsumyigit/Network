@@ -1,3 +1,4 @@
+using Enum;
 using static network.Category;
 
 namespace network
@@ -8,8 +9,7 @@ namespace network
       Task<List<Category>> GetAllCategory();
     Task<Team> GetTeam(int Id);
     Task<Category> GetCategory(int Id);
-    Task<Category> FindCategoryByName(Lesson lesson);
-    Task DeleteTeam();
+    Task DeleteTeam(Team team);
     Task<Team> CreateTeam(Team team);
     
 

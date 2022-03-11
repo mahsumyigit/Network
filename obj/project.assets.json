@@ -2152,11 +2152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\SahaBT Yazılım\\Desktop\\network\\network.csproj",
+      "projectUniqueName": "C:\\Users\\SahaBT Yazılım\\Desktop\\network\\network.csproj",
       "projectName": "network",
-      "projectPath": "c:\\Users\\SahaBT Yazılım\\Desktop\\network\\network.csproj",
+      "projectPath": "C:\\Users\\SahaBT Yazılım\\Desktop\\network\\network.csproj",
       "packagesPath": "C:\\Users\\SahaBT Yazılım\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\SahaBT Yazılım\\Desktop\\network\\obj\\",
+      "outputPath": "C:\\Users\\SahaBT Yazılım\\Desktop\\network\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SahaBT Yazılım\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2242,7 +2242,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

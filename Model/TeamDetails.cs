@@ -8,7 +8,7 @@ namespace network
         public string StartingDate { get; set; }
         public string EndingDate { get; set; }
         public int TeamId { get; set; }
-        public Team team{get;set;}
+        public virtual Team Teams { get; set; }
         
     }
 }
