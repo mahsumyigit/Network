@@ -1,5 +1,4 @@
 namespace network.Models;
-
 public class AuthenticateResponse
 {
     public int Id { get; set; }
