@@ -1,11 +1,9 @@
-namespace WebApi.Services;
-
+namespace network.Services;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using network.Helpers;
 using network.Models;
 using network;
 using network.AppSettings;
@@ -23,8 +21,8 @@ public class UserService : IUserService
     private List<User> _users = new List<User>
     {
         new User { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
+       
     };
-
     private readonly AppSettings _appSettings;
 
     public UserService(IOptions<AppSettings> appSettings)

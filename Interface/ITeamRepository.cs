@@ -9,7 +9,7 @@ namespace network
       Task<List<Category>> GetAllCategory();
     Task<Team> GetTeam(int Id);
     Task<Category> GetCategory(int Id);
-    Task DeleteTeam(Team team);
+    Task<Team> DeleteTeam(Team team);
     Task<Team> CreateTeam(Team team);
     
 

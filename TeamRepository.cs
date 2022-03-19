@@ -19,10 +19,11 @@ namespace network
             return team;
         }
 
-        public async Task DeleteTeam(Team team)
+        public async Task<Team> DeleteTeam(Team team)
         {
             _context.Teams.Remove(team);
             await _context.SaveChangesAsync();
+            return team;
         }
 
         public async Task<List<Category>> GetAllCategory()
@@ -44,5 +45,7 @@ namespace network
         {
             return await _context.Teams.FirstOrDefaultAsync(p=>p.Id==Id);
         }
+
+        
     }
 }

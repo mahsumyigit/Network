@@ -3,9 +3,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using network.Helpers;
 using network.AppSettings;
-using WebApi.Services;
+using network.Services;
 
 public class JwtMiddleware
 {

@@ -3,7 +3,7 @@ namespace network.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using network.Helpers;
 using network.Models;
-using WebApi.Services;
+using network.Services;
 
 [ApiController]
 [Route("[controller]")]

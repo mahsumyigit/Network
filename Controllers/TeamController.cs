@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using network.Models;
+using network;
 
-namespace network
+namespace network.Controllers
 {
     [ApiController]
     [Route("[controller]")]

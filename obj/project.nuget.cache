@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CxtOgVxVbhov6Jxj/mfQ06g9yOGd3iUVpY8Rc5a8vK53aPfpAHGYWIgs+CoKdoVukpybWko5AYRoRKhGRbccoA==",
+  "dgSpecHash": "4JTWMbQQcykiCDFqN2OlTGoEU6GOt/9Pbus4meNFZ67Q9AyBRU6fP+cq0uoKEshoTk7W51EJde7fNGtiVj74FQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SahaBT Yazılım\\Desktop\\network\\network.csproj",
+  "projectFilePath": "C:\\Users\\SahaBT Yazılım\\Desktop\\network\\network\\network.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SahaBT Yazılım\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\SahaBT Yazılım\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",

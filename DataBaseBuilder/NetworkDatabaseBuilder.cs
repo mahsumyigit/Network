@@ -63,7 +63,7 @@ namespace network
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name);
-                entity.HasOne(e=>e.TeamDetails).WithOne(e=>e.Teams).HasForeignKey("TeamDetailsId");
+                entity.HasOne(e=>e.TeamDetails).WithOne(e=>e.Teams).HasForeignKey<Team>("TeamDetailsId");
                 entity.HasOne(e=>e.Category).WithMany(e=>e.Teams).HasForeignKey("CategoryId");
 
             });
@@ -74,7 +74,6 @@ namespace network
                 entity.Property(e => e.Salary);
                 entity.Property(e => e.StartingDate);
                 entity.Property(c => c.EndingDate);
-                entity.HasOne(e=>e.Teams).WithOne(e=>e.TeamDetails).HasForeignKey("TeamId");
             });
             modelBuilder.Entity<Category>(entity =>
             {

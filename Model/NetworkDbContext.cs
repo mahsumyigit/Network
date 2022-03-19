@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using network.Models;
 
 namespace network
 {
@@ -7,6 +8,9 @@ namespace network
         public DbSet<Team>? Teams { get; set; }
         public DbSet<Category>? Categories { get; set; }
         public DbSet<TeamDetails>? TeamDetails { get; set; }
+        public DbSet<User>? Users{get;set;}
+        public DbSet<AuthenticateRequest>? AuthenticateRequests{get;set;}
+        public DbSet<AuthenticateResponse>? AuthenticateResponses{get;set;}
 
 
 
