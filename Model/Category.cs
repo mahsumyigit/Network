@@ -7,7 +7,9 @@ namespace network
     {
         public int Id { get; set; }
         public virtual Lesson Lessons { get; set; }
-        public virtual IEnumerable<Team> Teams { get; set; }
+        public int TeamDetailsId { get; set; }
+        public TeamDetails TeamDetails { get; set; }
+        public virtual ICollection<Team> Teams { get; set; }
     }
 
 }

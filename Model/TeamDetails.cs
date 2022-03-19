@@ -9,6 +9,7 @@ namespace network
         public string EndingDate { get; set; }
         public int TeamId { get; set; }
         public virtual Team Teams { get; set; }
+        public virtual ICollection<Category> Categories {get;set;}
         
     }
 }

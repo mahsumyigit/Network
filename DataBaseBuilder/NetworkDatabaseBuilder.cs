@@ -13,15 +13,13 @@ namespace network
             new Team
             {
                 Id = 4,
-                Name = "ali",
-                CategoryId = 1,
+                Name = "ali"
 
             },
             new Team
             {
                 Id = 3,
-                Name = "ahmet",
-                CategoryId = 2,
+                Name = "ahmet"
             }
         );
             modelBuilder.Entity<TeamDetails>().HasData(
@@ -64,7 +62,6 @@ namespace network
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name);
                 entity.HasOne(e=>e.TeamDetails).WithOne(e=>e.Teams).HasForeignKey<Team>("TeamDetailsId");
-                entity.HasOne(e=>e.Category).WithMany(e=>e.Teams).HasForeignKey("CategoryId");
 
             });
             modelBuilder.Entity<TeamDetails>(entity =>
@@ -79,7 +76,7 @@ namespace network
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e=>e.Lessons);
-                entity.HasMany(e => e.Teams).WithOne(e=>e.Category);
+                entity.HasOne(e => e.TeamDetails).WithMany(e=>e.Categories).HasForeignKey(e=>e.TeamDetailsId);
 
             });
             SetDataToDB(modelBuilder);
