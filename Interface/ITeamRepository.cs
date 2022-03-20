@@ -11,8 +11,5 @@ namespace network
     Task<Category> GetCategory(int Id);
     Task<Team> DeleteTeam(Team team);
     Task<Team> CreateTeam(Team team);
-    
-
-
     }
 }
